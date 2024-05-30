@@ -11,14 +11,16 @@ public class PurchaseModel {
     private int amount;
     private SpendingCategory category;
     private String name;
+    private int spendingWeekId;
 
     // Constructor
-    public PurchaseModel(int id, LocalDate purchaseDate, int amount, SpendingCategory category, String name) {
+    public PurchaseModel(int id, LocalDate purchaseDate, int amount, SpendingCategory category, String name, int spendingWeekId) {
         this.id = id;
         this.purchaseDate = purchaseDate;
         this.amount = amount;
         this.category = category;
         this.name = name;
+        this.spendingWeekId = spendingWeekId;
     }
 
     // Getters and Setters
@@ -61,4 +63,8 @@ public class PurchaseModel {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getSpendingWeekId() { return spendingWeekId; }
+
+    public void setSpendingWeekId(int spendingWeekId) { this.spendingWeekId = spendingWeekId; }
 }
