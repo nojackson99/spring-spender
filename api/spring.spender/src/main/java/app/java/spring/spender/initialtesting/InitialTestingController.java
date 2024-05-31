@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("testing")
+@RequestMapping("/testing")
 public class InitialTestingController {
 
     private final InitialTestingService initialTestingService;
@@ -17,13 +17,13 @@ public class InitialTestingController {
     }
 
     // POST seed initial data
-    @PostMapping("/seedPurchases")
+    @RequestMapping("/seedPurchases")
     public void seedPurchases() {
         initialTestingService.seedPurchases();
     }
 
     // GET get a purchase by id
-    @GetMapping("/getPurchase/{id}")
+    @RequestMapping("/getPurchase/{id}")
     public void getPurchase(@PathVariable int id) {
         initialTestingService.getPurchase(id);
     }
