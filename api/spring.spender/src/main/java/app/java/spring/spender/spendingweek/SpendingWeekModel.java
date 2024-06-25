@@ -12,14 +12,14 @@ public class SpendingWeekModel {
     private LocalDate endDate;
     private int id;
     private double totalAvailable;
-    private double available;
+    private double currentSpend;
 
     // Constructor
-    public SpendingWeekModel(LocalDate startDate, LocalDate endDate, int id, double totalAvailable, double available) {
+    public SpendingWeekModel(LocalDate startDate, LocalDate endDate, int id, double totalAvailable, double currentSpend) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.id = id;
         this.totalAvailable = totalAvailable;
-        this.available = available;
+        this.currentSpend = currentSpend;
     }
 }

@@ -7,9 +7,9 @@ import java.time.LocalDate;
 
 @Service
 public class PurchaseService {
-    public PurchaseService() {};
+    public PurchaseService() {}
 
-    public boolean setNewPurchase(LocalDate purchaseDate, int amount, String category, String name) {
+    public boolean setNewPurchase(LocalDate purchaseDate, double amount, String category, String name) {
         // TODO: Get spendingWeekID from purchaseDate
         int spendingWeekId = 0;
 

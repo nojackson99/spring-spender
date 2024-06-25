@@ -2,19 +2,24 @@ package app.java.spring.spender.purchase;
 
 
 import app.java.spring.spender.enums.SpendingCategory;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
+@Setter @Getter @NoArgsConstructor
 public class PurchaseModel {
+    // Getters and Setters
     private int id;
     private LocalDate purchaseDate;
-    private int amount;
+    private double amount;
     private SpendingCategory category;
     private String name;
     private int spendingWeekId;
 
     // Constructor
-    public PurchaseModel(int id, LocalDate purchaseDate, int amount, SpendingCategory category, String name, int spendingWeekId) {
+    public PurchaseModel(int id, LocalDate purchaseDate, double amount, SpendingCategory category, String name, int spendingWeekId) {
         this.id = id;
         this.purchaseDate = purchaseDate;
         this.amount = amount;
@@ -23,48 +28,4 @@ public class PurchaseModel {
         this.spendingWeekId = spendingWeekId;
     }
 
-    // Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public LocalDate getPurchaseDate() {
-        return purchaseDate;
-    }
-
-    public void setPurchaseDate(LocalDate purchaseDate) {
-        this.purchaseDate = purchaseDate;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public SpendingCategory getCategory() {
-        return category;
-    }
-
-    public void setCategory(SpendingCategory category) {
-        this.category = category;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getSpendingWeekId() { return spendingWeekId; }
-
-    public void setSpendingWeekId(int spendingWeekId) { this.spendingWeekId = spendingWeekId; }
 }

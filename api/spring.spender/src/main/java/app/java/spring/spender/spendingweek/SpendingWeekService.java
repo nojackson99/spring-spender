@@ -16,14 +16,14 @@ public class SpendingWeekService {
         double totalAvailable = spendingWeekRequest.getTotalAvailable();
 
         // Set remaining properties needed for SpendingWeekModel
-        double available = totalAvailable - carryOver;
+        double currentSpend = totalAvailable - carryOver;
         LocalDate endDate = startDate.plusDays(7);
 
         // TODO: Query sequence for next spendingWeekId
         int spendingWeekId = 0;
 
         // TODO: use spendingWeek to construct the sql insert statement
-        SpendingWeekModel spendingWeek = new SpendingWeekModel(startDate, endDate, spendingWeekId, totalAvailable, available);
+        SpendingWeekModel spendingWeek = new SpendingWeekModel(startDate, endDate, spendingWeekId, totalAvailable, currentSpend);
 
         // TODO: return response model with the result of the sql insert and if successful the record id
         return true;
